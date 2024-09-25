@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KingdomBlock: Join the Blockchain Gaming Revolution! Active Giveaway Now!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e);
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        header {
+            margin-bottom: 40px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #4ecca3;
+        }
+        .game-title {
+            font-size: 4em;
+            color: #ffd700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+        .cta-card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            margin: 40px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background-color: #4ecca3;
+            color: #1a1a2e;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #45b393;
+            transform: scale(1.05);
+        }
+        .features {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .feature {
+            flex-basis: 30%;
+            margin-bottom: 30px;
+        }
+        .feature h3 {
+            color: #4ecca3;
+        }
+        #countdown {
+            font-size: 2em;
+            margin-top: 20px;
+            color: #4ecca3;
+        }
+        .giveaway-banner {
+            background-color: #ff6b6b;
+            color: #fff;
+            padding: 10px;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="game-title">KingdomBlock</h1>
+            <h2>Unlock the Future of Gaming</h2>
+            <p>Join our exclusive Telegram community and be part of the blockchain gaming revolution!</p>
+        </header>
+
+        <div class="giveaway-banner" role="alert" aria-live="polite">
+            🎉 Active Giveaway: Join now for a chance to win exciting KingdomBlock rewards! 🎉
+        </div>
+
+        <div class="cta-card">
+            <h2>Limited Time Offer!</h2>
+            <p>Join now and get early access to KingdomBlock, our revolutionary blockchain game. Participate in our active giveaway and unlock presale opportunities.</p>
+            <a href="https://t.me/your_telegram_channel" class="cta-button">Join Our Telegram Channel Now!</a>
+            <div id="countdown" aria-live="polite"></div>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Active Giveaway</h3>
+                <p>Participate in our ongoing KingdomBlock giveaway and win valuable rewards!</p>
+            </div>
+            <div class="feature">
+                <h3>Presale Access</h3>
+                <p>Get priority access to KingdomBlock token presales and special offers.</p>
+            </div>
+            <div class="feature">
+                <h3>Community-Driven</h3>
+                <p>Shape the future of KingdomBlock with your feedback and ideas.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer
+        const countdownDate = new Date().getTime() + 3 * 24 * 60 * 60 * 1000; // 3 days from now
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = countdownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            countdownElement.innerHTML = `KingdomBlock Giveaway ends in: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                countdownElement.innerHTML = "KingdomBlock Giveaway Ended!";
+            }
+        }
+
+        const countdownTimer = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Add subtle animation to CTA button
+        const ctaButton = document.querySelector('.cta-button');
+        setInterval(() => {
+            ctaButton.style.transform = 'scale(1.05)';
+            setTimeout(() => {
+                ctaButton.style.transform = 'scale(1)';
+            }, 200);
+        }, 5000);
+    </script>
+</body>
+</html>
